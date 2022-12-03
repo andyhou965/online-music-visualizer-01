@@ -101,7 +101,7 @@ window.addEventListener("load", function () {
 	let bars = [];
 	let barWidth = canvas.width / (fftSize / 2);
 	function createBars() {
-		for (let i = 0; i < fftSize / 2; i++) {
+		for (let i = 1; i < fftSize / 2; i++) {
 			let color = "hsl(" + i + ",100%, 50%)";
 			bars.push(new Bar(0, i * 0.9, 1, 0, color, i));
 		}
@@ -110,7 +110,7 @@ window.addEventListener("load", function () {
 
 	let softVolume = 0;
 	function animate() {
-		if ((microphone.initialized = true)) {
+		if (microphone.initialized) {
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
 			const samples = microphone.getSamples();
 			const volume = microphone.getVolume();
