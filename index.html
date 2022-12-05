@@ -9,15 +9,15 @@
 	</head>
 	<body>
 		<div id="container">
+			<div id="audio_container">
+				<audio id="audio1" controls></audio>
+				<input type="file" id="fileupload" accept="audio/*" />
+			</div>
 			<h3>
 				点击屏幕某处或选择本地音频文件进行可视化！<br />
 				Click somewhere screen or choose a local audio file to
 				visualize!
 			</h3>
-			<div id="audio_container">
-				<audio id="audio1" controls></audio>
-				<input type="file" id="fileupload" accept="audio/*" />
-			</div>
 			<canvas id="canvas1"></canvas>
 		</div>
 		<script src="script.js"></script>
